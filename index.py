@@ -74,7 +74,7 @@ class Main(QMainWindow , main_ui):
             for h in row:
                 allemail.append(h)
         if self.lineEdit_7.text() in allemail :
-            SMTP({"karensophy7@gmail.com": "Looger App"}, "kareemsobhyali").send(self.lineEdit_7.text(), "Loger App Reset Password" , "A password reset for your account was requested Code Is : {}".format(self.code))
+            SMTP({"You Email": "Username"}, "YouPass").send(self.lineEdit_7.text(), "Loger App Reset Password" , "A password reset for your account was requested Code Is : {}".format(self.code))
             self.tabWidget.setCurrentIndex(3)
 
         else:
@@ -101,7 +101,7 @@ class Main(QMainWindow , main_ui):
 
     def send_code(self):
         self.code = randint(111111 , 999999)
-        SMTP({"karensophy7@gmail.com": "Looger App"}, "kareemsobhyali").send(self.lineEdit_7.text(),
+        SMTP({"Your Email": "USerName"}, "Password").send(self.lineEdit_7.text(),
                                                                              "Loger App Reset Password",
                                                                              "A password reset for your account was requested Code Is : {}".format(
                                                                                  self.code))
